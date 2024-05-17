@@ -1,0 +1,13 @@
+<div class="input-container">
+  <label for="inputField">{{ label }}</label>
+  <input
+    #inputField
+    type="text"
+    [ngClass]="{ 'error': control.invalid && (control.dirty || control.touched) }"
+    [formControl]="control"
+    (blur)="markAsTouched()"
+    (input)="onInput($event)">
+  <div class="error-message" *ngIf="control.invalid && (control.dirty || control.touched)">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+/* Estilos para el título H2 */
+h2 {
+  text-align: center; /* Centra el texto del título */
+}
+
+/* Estilos para la línea horizontal */
+hr {
+  width: 100%; /* Ancho completo del contenedor */
+  margin: 20px 0; /* Margen superior de 20px, margen inferior de 0 */
+} 
+
+/* Estilos para el formulario */
+form {
+  display: grid; /* Define el formulario como una grilla */
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  column-gap: 50px; /* Espacio de 50px entre las columnas */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+  width: 70%; /* Ancho del contenedor del formulario */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) { 
+  /* Ajusta el diseño del formulario para pantallas pequeñas */
+  form {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex; /* Define el contenedor como un elemento flexbox */
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio de 10px entre los botones */
+  margin: 20px; /* Margen de 20px alrededor del contenedor */
+}

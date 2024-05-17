@@ -1,0 +1,14 @@
+.table-header {
+  display: flex;
+  margin: 0 20% 0 20%;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+}

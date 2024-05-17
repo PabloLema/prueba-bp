@@ -1,0 +1,32 @@
+// Estilos generales
+body {
+  background-color: #f2f2f2; // Gris claro
+  min-height: 100vh;
+}
+
+// Estilos para el rectángulo superior
+.header {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0; // Padding superior e inferior
+  display: flex; // Para alinear elementos horizontalmente
+  align-items: center; // Centra verticalmente el contenido
+  justify-content: center; // Contenido al centro
+}
+
+// Estilos para el icono y el texto del título
+.header-title {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem; // Margen izquierdo para el texto
+}
+
+.header-title h3 {
+  color: #0E1E45; // Color del texto
+  margin: 0; // Elimina el margen por defecto del h3
+}
+
+// Estilos para el contenido del router-outlet
+.content {
+  padding: 2rem; // Añade padding al contenido de las rutas
+}

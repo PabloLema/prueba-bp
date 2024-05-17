@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  table-layout: fixed;
+}
+
+thead {
+  overflow-x: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8em;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.product-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-button, .delete-button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  color: #ffD631;
+}
+
+.delete-button {
+  color: #FF8A80;
+}

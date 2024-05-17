@@ -1,0 +1,55 @@
+<app-container>
+  <h2>Formulario de Registro</h2>
+  <hr>
+  <form class="form-container" [formGroup]="productRegisterForm">
+    <app-b-input 
+      label="ID" 
+      errorMessage="ID no válido!"
+      [control]="getFormControl('id')">
+    </app-b-input>
+    <app-b-input 
+      label="Nombre" 
+      errorMessage="Este campo es requerido"
+      [control]="getFormControl('name')">
+    </app-b-input>
+    <app-b-input 
+      label="Descripción" 
+      errorMessage="Este campo es requerido"
+      [control]="getFormControl('description')">
+    </app-b-input>
+    <app-b-input 
+      label="Logo" 
+      errorMessage="Este campo es requerido"
+      [control]="getFormControl('logo')">
+    </app-b-input>
+    <app-b-input 
+      label="Fecha Liberación" 
+      errorMessage="Este campo es requerido"
+      [control]="getFormControl('date_release')">
+    </app-b-input>
+    <app-b-input 
+      label="Fecha Revisión" 
+      errorMessage="Este campo es requerido"
+      [control]="getFormControl('date_revision')">
+    </app-b-input>
+  </form>
+
+  <div class="button-container">
+    <app-b-button type="primary" (onClick)="resetForm()">
+      Reiniciar
+    </app-b-button>
+
+    <app-b-button type="secondary" (onClick)="sendForm()">
+      Enviar
+    </app-b-button>
+
+  </div>
+</app-container>
+
+<app-b-dialog
+  [message]="messageDialog"
+  [showCancelButton]="false"
+  [show]="showDialog"
+  (confirmed)="onDialogConfirmed($event)"
+  >
+</app-b-dialog>

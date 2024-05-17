@@ -1,0 +1,29 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Logo</th>
+        <th>Nombre del producto</th>
+        <th>Descripción</th>
+        <th>Fecha de liberación</th>
+        <th>Fecha de revisión</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>
+          <img src="{{ product.logo }}" alt="{{ product.name }}" class="product-logo">
+        </td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.date_release | localDate }}</td>
+        <td>{{ product.date_revision | localDate }}</td>
+        <td>
+          <button (click)="onEdit(product)" class="edit-button"><i class="fa fa-edit"></i></button>
+          <button (click)="onDelete(product)" class="delete-button"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

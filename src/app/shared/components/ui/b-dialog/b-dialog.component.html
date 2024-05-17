@@ -1,0 +1,15 @@
+<div class="dialog-container" *ngIf="show">
+  <div class="dialog-content">
+    <div class="dialog-body">
+      {{ message }}
+    </div>
+    <div class="dialog-footer">
+      <app-b-button *ngIf="showCancelButton" type="primary" (onClick)="cancel()">
+        Cancelar
+      </app-b-button>
+      <app-b-button type="secondary" (onClick)="confirm()">
+        Continuar
+      </app-b-button>
+    </div>
+  </div>
+</div>

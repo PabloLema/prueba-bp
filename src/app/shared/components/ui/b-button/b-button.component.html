@@ -1,0 +1,7 @@
+<button 
+  [ngClass]="{'primary': type === 'primary', 'secondary': type === 'secondary'}"
+  [disabled]="disabled"
+  (click)="handleClick()"
+>
+  <ng-content></ng-content>
+</button>

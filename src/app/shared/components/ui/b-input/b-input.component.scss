@@ -1,0 +1,32 @@
+/* Estilos para el contenedor del input */
+.input-container {
+  display: flex; /* Define el contenedor como elemento flexbox */
+  flex-direction: column; /* Alinea los elementos del contenedor en una columna */
+  margin-bottom: 10px; /* Añade un margen inferior de 10px */
+}
+
+/* Estilos para el input */
+input {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 8px; /* Añade un padding de 8px */
+  border: 1px solid #ccc; /* Añade un borde de 1px sólido color #ccc */
+  border-radius: 4px; /* Aplica un radio de borde de 4px */
+
+  /* Estilos para el input cuando es inválido (tiene la clase 'error') */
+  &.error {
+    border-color: red; /* Cambia el color del borde a rojo */
+  }
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  color: red; /* Color del texto del mensaje de error */
+  font-size: 12px; /* Tamaño del texto del mensaje de error */
+  margin-top: 5px; /* Añade un margen superior de 5px */
+}
+
+/* Estilos para el input cuando está enfocado */
+input:focus {
+  outline: none; /* Elimina el borde de enfoque por defecto */
+  border-color: darken(#ccc, 20%); /* Cambia el color del borde a un tono más oscuro del #ccc */
+}

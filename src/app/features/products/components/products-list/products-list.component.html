@@ -1,0 +1,38 @@
+<div class="table-header">
+  <app-b-input 
+    label="Buscar" 
+    [control]="search"
+    errorMessage="Este campo es requerido">
+  </app-b-input>
+  <app-b-button type="secondary" (onClick)="addProductNavigate()">
+    Agregar
+  </app-b-button>
+</div>
+<app-container>
+  <app-b-table
+    [products]="filteredProducts"
+    (editProduct)="onEditProduct($event)"
+    (deleteProduct)="onDeleteProduct($event)">
+  </app-b-table>
+
+  <div class="table-footer">
+    <p>{{ selectedValue }} resultados</p>
+    <app-b-dropdown [options]="dropdownOptions" (selectionChange)="onSelectionChange($event)"></app-b-dropdown>
+  </div>
+</app-container>
+<app-b-dialog
+  [message]="messageDialog"
+  [showCancelButton]="true"
+  [show]="showDialog"
+  (confirmed)="onDialogConfirmed($event)"
+  (canceled)="onDialogCanceled($event)"
+  >
+</app-b-dialog>
+
+<app-b-dialog
+  [message]="messageDialog"
+  [showCancelButton]="false"
+  [show]="showSuccessDialog"
+  (confirmed)="successDialog($event)"
+  >
+</app-b-dialog>
